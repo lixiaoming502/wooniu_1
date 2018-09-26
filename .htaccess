@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule info_(.*).html$ /novel/article_info.php?id=$1
+RewriteRule list_(.*).html$ /novel/article_list.php?id=$1
+RewriteRule content_(.*).html$ /novel/chapter_content.php?id=$1

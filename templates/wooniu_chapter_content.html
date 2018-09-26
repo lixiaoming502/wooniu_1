@@ -1,0 +1,90 @@
+﻿  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-transform" /><meta http-equiv="Cache-Control" content="max-age=0" /><meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>{#$chapter.chapter_title#}_{#$chapter.article_title#}_{#$web_title#}</title>
+    <meta name="keywords" content="{#$chapter.chapter_title#},{#$chapter.article_title#}" />
+    <meta name="description" content="{#$chapter.chapter_title#}是吱吱所著小说《{#$chapter.article_title#}》的最新章节，本站提供无弹窗阅读！" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/read.css" />
+    <script language="javascript" type="text/javascript" src="/js/read.js"></script>
+    <script language="javascript" type="text/javascript" src="/js/yuedu.js"></script> 
+	<script>
+        /**
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?5eb81c3b57ea700d51556a83f9cebcfe";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+
+	(function(){
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+    })();
+    **/
+	</script>
+    <style>
+	.topMenuFree a{width:42%;}
+	.topMenuFree  .fontsize{width:16%;}
+    </style>
+    </head>
+<body id="read" class="read">
+<header id="top" class="channelHeader channelHeader2"><a href="javascript:history.go(-1);" class="iconback"><img src="/images/header-back.gif" alt="返回"/></a><span class="title">{#$chapter.chapter_title#}&nbsp;&nbsp;{#$chapter.article_title#}</span><a href="/" class="iconhome"><img src="/images/header-backhome.gif" alt="首页"/></a></header>
+<div class="bg"></div>
+<a name="pagetop"></a>
+<p class="Readpage" style="background:#FFFFFF;padding:2px;">
+    	<a id="lightdiv" class="button lightoff" onclick="nr_setbg('light')">关灯</a>
+        <a id="huyandiv" class="button huyanon"  onclick="nr_setbg('huyan')">护眼</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        字体：<a id="fontbig" class="sizebg" onclick="nr_setbg('big')">大</a> <a id="fontmiddle" class="sizebg" onclick="nr_setbg('middle')" >中</a> <a id="fontsmall" class="sizebg" onclick="nr_setbg('small')">小</a>
+</p>
+<p class="Readpage">
+<a id="pt_prev" href="{#$last_url#}">上一章</a><a href="{#$menu_url#}" id="pt_mulu" class="Readpage_up">目录</a>
+<a id="pb_next" href="{#$next_url#}">下一章</a></p>
+<!-- <script>_17mb_top()</script> -->
+<div id="chaptercontent" class="Readarea ReadAjax_content">
+    {#$content#}
+</div>
+<script language="javascript">getset()</script>
+<script language="javascript">getset1()</script>
+<p class="synopsisAd ReadAd ReadAd2"></p>
+<p class="Readpage">
+<a id="pt_prev" href="{#$last_url#}">上一章</a><a href="{#$menu_url#}" id="pt_mulu" class="Readpage_up">目录</a>
+<a id="pb_next" href="{#$next_url#}">下一章</a></p>
+<script language="javascript" type="text/javascript" src="/js/zepto.min.js"></script>
+<script language="javascript" type="text/javascript" src="/js/common.js"></script>
+<script language="javascript" type="text/javascript" src="/js/index.js"></script>
+
+<script type="text/javascript">
+var lastread=new LastRead();lastread.set('{#$chapter.article_id#}', '{#$chapter.chapter_id#}', '{#$chapter.article_title#}', '{#$chapter.chapter_title#}');
+</script>
+<!-- <script>_17mb_bottom();</script> -->
+    <form class="searchForm" method="post">
+        <input type="text" id="bdcsMain" name="q" class="searchForm_input searchForm_input2" value="输入书名•作者" />
+        <input type="button" class="searchForm_btn" value="搜索"  onclick="javascript:doSearch();"/>
+    </form>
+<footer>
+    <a href="#top"><img src="/images/icon-backtop.gif" title="↑" alt="返回顶部"/></a>
+    <p class="version channel">
+    <a href="/">首页</a>
+    <a rel="nofollow" href="/mybook.php" >我的书架</a>
+    <a rel="nofollow" href="/newcase.html" >阅读记录</a>
+    </p>
+</footer>
+<!-- <script>_17mb_xuanfu();</script> -->
+</body>
+</html>

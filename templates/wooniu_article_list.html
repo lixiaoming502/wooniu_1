@@ -1,0 +1,47 @@
+
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+      <meta http-equiv="Cache-Control" content="no-transform" /><meta http-equiv="Cache-Control" content="max-age=0" /><meta http-equiv="Cache-Control" content="no-siteapp" />
+      <title>{#$article_title#}最新更新章节-{#$article_title#}目录列表-{#$web_title#}手机版</title>
+      <meta name="generator" content="{#$web_title#}小说阅读手机站" />
+      <meta id="ctl00_metaKeywords" name="keywords" content="{#$article_title#},{#$article_title#}章节目录,{#$article_title#}最新更新"/>
+      <meta id="ctl00_metaDescription" name="description" content="{#$article_title#}章节目录页,本书由{#$web_title#}的会员收集于网络,供书友们及时阅读和下载到{#$article_title#}最新更新手打全文字TXT章节。" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+       <link rel="stylesheet" href="/css/reset.css" />
+      <link rel="stylesheet" href="/css/index.css" />
+      <!-- <script src="/xsl/xsl.js"></script> -->
+  </head>
+  <body>
+    <header id="top" class="channelHeader channelHeader2"><a href="javascript:history.go(-1);" class="iconback"><img src="/images/header-back.gif" alt="返回"/></a>
+    <span class="title">{#$article_title#}</span><a href="/" class="iconhome"><img src="/images/header-backhome.gif" alt="首页"/></a></header>
+    
+  <div id="chapterlist" class="directoryArea">
+      {#section name=list loop=$chapter_lst#}
+      <p><a href="{#$chapter_lst[list].chapter_url#}">{#$chapter_lst[list].title#}</a></p>
+      {#/section#}
+  </div>
+  
+  <p class="Readpage" id="bottom"></p><p class="note"></p>
+      <script language="javascript" type="text/javascript" src="/js/zepto.min.js"></script>
+      <script language="javascript" type="text/javascript" src="/js/common.js"></script>
+  <!-- <script>_17mb_bottom();</script> -->
+      <form class="searchForm" method="post">
+          <input type="text" id="bdcsMain" name="q" class="searchForm_input searchForm_input2" value="输入书名•作者" />
+          <input type="button" class="searchForm_btn" value="搜索"  onclick="javascript:doSearch();"/>
+      </form>
+  <footer>
+      <a href="#top"><img src="/images/icon-backtop.gif" title="↑" alt="返回顶部"/></a>
+      <p class="version channel">
+      <a href="/">首页</a>
+      <a rel="nofollow" href="/mybook.php" >我的书架</a>
+      <a rel="nofollow" href="/newcase.html" >阅读记录</a>
+      </p>
+  </footer>
+  <!-- <script>_17mb_xuanfu();</script> -->
+  </body>
+  </html>

@@ -1,0 +1,165 @@
+﻿  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{#$article_title#}最新章节_{#$article_title#}{#$author#}无弹窗_{#$web_title#}</title>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+    <meta name="keywords" content="{#$article_title#},{#$article_title#}最新章节,{#$article_title#}{#$author#}无弹窗"/>
+    <meta name="description" content="{#$article_title#}最新章节由网友提供，《{#$article_title#}》情节跌宕起伏、扣人心弦，是{#$author#}的一本情节与文笔俱佳的玄幻小说，{#$web_title#}免费提供{#$article_title#}最新文字章节无弹窗在线阅读。" />
+    <meta property="og:type" content="novel"/>
+    <meta property="og:title" content="{#$article_title#}"/>
+    <meta property="og:description" content="{#$description|truncate:70#}"/>
+    <meta property="og:image" content="{#$image#}"/>
+    <meta property="og:novel:category" content="{#$category#}"/>
+    <meta property="og:novel:author" content="{#$author#}"/>
+    <meta property="og:novel:book_name" content="{#$article_title#}"/>
+    <meta property="og:novel:read_url" content="{#$read_url#}"/>
+    <meta property="og:url" content="{#$read_url#}"/>
+    <meta property="og:novel:status" content="{#$status#}"/>
+    <meta property="og:novel:update_time" content="{#$update_time#}"/>
+	<meta property="og:novel:latest_chapter_url" content="{#$latest_chapter_url#}"/>
+    <meta property="og:novel:latest_chapter_name" content="{#$latest_chapter_name#}"/>
+	<meta name="applicable-device" content="mobile" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/bookinfo.css" />
+	<script>
+        /**
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?5eb81c3b57ea700d51556a83f9cebcfe";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+
+    
+    (function(){
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+    })();
+    
+	//ajax获取小说更新时间
+	function gt(id) {
+          var xmlHttpReg = null;
+          if (window.ActiveXObject) {
+              xmlHttpReg = new ActiveXObject("Microsoft.XMLHTTP");
+          } else if (window.XMLHttpRequest) {
+              xmlHttpReg = new XMLHttpRequest(); 
+          }
+          //如果实例化成功,就调用open()方法,就向服务器发送请求时间
+          if (xmlHttpReg != null) {
+			  xmlHttpReg.open("get", "https://m.xiaoshuoli.com/info_time.php?aid="+id, true);
+               xmlHttpReg.send(null);
+              xmlHttpReg.onreadystatechange = doResult; 
+          }
+          function doResult() {          
+              if (xmlHttpReg.readyState == 4) {            
+                  if (xmlHttpReg.status == 200) {
+                      document.getElementById("timeid").innerHTML = xmlHttpReg.responseText;
+				}
+			 }
+		}
+    }
+    **/
+	</script>
+</head>
+<body>
+<header class="channelHeader channelHeader2">
+<a href="javascript:history.go(-1);" class="iconback"><img src="/images/header-back.gif" alt="返回"/></a>
+<h1 class="title">{#$article_title#}</h1>
+<a href="/" class="iconhome"><img src="/images/header-backhome.gif" alt="首页"/></a>
+</header>
+    <div class="synopsisArea">
+        <div class="synopsisArea_detail">
+            <img alt="{#$article_title#}" src="{#$image#}" onerror="this.src='/images/defaultimg.png'" />
+            <p class="author">作者：{#$author#}</p>
+            <p class="sort">
+                类别：{#$category#}</p>
+            <p class="">
+                状态：{#$status#} </p>
+            <p class="">
+                更新：{#$update_time#} <span name="timeid" id="timeid"></span><script>gt(7730);</script></p>
+            <p class="">
+                最新：<a href="{#$latest_chapter_url#}">{#$latest_chapter_name#}</a></p>        </div>
+        <p class="btn">
+			<a href="{#$firstChapter.chapter_url#}">开始阅读</a><a href="javascript:addBookMarkByManual(0,{#$article_id#});" class="btn_toBookShelf">加入书架</a><a rel="nofollow" href="/mybook.php" class="btn_toMyBook">我的书架</a>
+	</p>
+        <p class="review">
+            {#$description|truncate:70#}
+        </p>
+    </div>
+    <div  class="recommend">
+        <div class="list_1"><p>《{#$article_title#}》最新章节无弹窗</p></div>
+	        <div class="directoryArea">
+                    {#section name=list loop=$last5_chapters#}
+                        <p><a href="{#$last5_chapters[list].chapter_url#}" title="{#$last5_chapters[list].title#}_{#$article_title#}">{#$last5_chapters[list].title#}</a></p>
+                    {#/section#}
+        	</div>
+	        <div class="list_1"><p>《{#$article_title#}》章节目录</p></div>
+	        <div class="directoryArea">
+                {#section name=list loop=$first5_chapters#}
+                <p><a href="{#$first5_chapters[list].chapter_url#}" title="{#$first5_chapters[list].title#}_{#$article_title#}">{#$first5_chapters[list].title#}</a></p>
+                {#/section#}
+        	</div>
+ 	 <div class="list_1"><a href="{#$all_chapter_url#}" style="text-align: center;display: block;color: white;">查看完整目录&gt;&gt;</a></div>
+    </div>
+    <script language="javascript" type="text/javascript" src="/js/zepto.min.js"></script>
+    <script language="javascript" type="text/javascript" src="/js/common.js"></script>
+    <script language="javascript" type="text/javascript" src="/js/index.js"></script>
+	<script>_17mb_bottom();</script>
+  <script language="javascript" type="text/javascript">
+$(function(){
+    //ReverseChapterList()
+	//$("img.lazy").lazyload();
+});
+
+$('.nav a').click(function(){
+	$(this).addClass('sel');
+	$(this).siblings().removeClass('sel');
+	
+	$obj = $('.'+ $(this).attr('id'));
+	
+	$obj.siblings().hide();
+	$obj.show();
+	$('.bomtype').text($obj.data('type'));
+	$('.bomtypeclass').text($(this).attr('id'));
+});	
+
+$(function(){
+	$('.btn_to2014').click(function(){
+		$('.bom_synopsis').show();
+		$('.bg').show();
+	});
+	
+	$('.bomhide').click(function(){
+		$('.bombox').hide();
+		$('.bg').hide();	
+	});
+})
+</script>
+    <form class="searchForm" method="post">
+        <input type="text" id="bdcsMain" name="q" class="searchForm_input searchForm_input2" value="输入书名•作者" />
+        <input type="button" class="searchForm_btn" value="搜索"  onclick="javascript:doSearch();"/>
+    </form>
+<footer>
+    <a href="#top"><img src="/images/icon-backtop.gif" title="↑" alt="返回顶部"/></a>
+    <p class="version channel">
+    <a href="/">首页</a>
+    <a rel="nofollow" href="/mybook.php" >我的书架</a>
+    <a rel="nofollow" href="/newcase.html" >阅读记录</a>
+    </p>
+</footer>
+<script>_17mb_xuanfu();</script>
+  </body>
+</html>

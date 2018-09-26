@@ -1,0 +1,168 @@
+
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+      <meta http-equiv="Cache-Control" content="no-transform" /><meta http-equiv="Cache-Control" content="max-age=0" /><meta http-equiv="Cache-Control" content="no-siteapp" />
+      <title>{#$web_title#}-小说全文阅读,免费小说阅读网</title>
+      <meta name="generator" content="{#$web_title#}手机站" />
+      <meta id="ctl00_metaKeywords" name="keywords" content="{#$web_title#},全本小说,完结小说,在线小说,全文阅读"/>
+      <meta id="ctl00_metaDescription" name="description" content="{#$web_title#}提供优质的小说在线预览阅读，我们立志于为广大网友分享健康向上的内容而不断努力!" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <link rel="stylesheet" href="/css/index.css" />
+      <!-- 
+          加载站长统计代码
+          <script src="/xsl/xsl.js"></script>
+       -->
+      <style type="text/css">
+      .bannerLink .ajax_html, .list .ajax_html{height:auto; overflow:hidden; line-height:normal;}
+      .ajax_html{text-align:center; width:320px; margin:0 auto;}
+      .tabArea4 .ajax_html{width:25%; margin:0;}
+      .ajax_html img{padding:20px 0;}
+      .ajax_html b{display:none;}
+   </style>
+  </head>
+  <body>
+  <header class="Index_Header">
+          <img src="/images/logo.png" class="logo" title="{#$web_title#}" alt="{#$web_title#}"/>
+          <a rel="nofollow" href="/user.php" id="login" class="login">个人中心</a>
+  </header> 
+      <nav class="smallNav">
+          <a href="/xclass/0/1.html">分类</a>
+          <a href="/ph/week.html">排行</a>
+          <a href="/quanben.html">全本</a>
+                  <a rel="nofollow" href="/newcase.html" style="width:32%">阅读记录</a>
+                  <a rel="nofollow" href="/mybook.php">书架</a>
+      </nav>
+      <form class="searchForm" method="post">
+          <input type="text" id="bdcsMain" name="q" class="searchForm_input searchForm_input2" value="输入书名•作者" />
+          <input type="button" class="searchForm_btn" value="搜索"  onclick="javascript:doSearch();"/>
+      </form>
+      <div class="tabArea tabArea4 hot">
+          <div class="tab-nav clearfix">
+              <h2><a class="tab-nav-cur">强推</a></h2>
+              <h2><a style="display: none;">热门</a></h2>
+              <h2><a style="display: none;">全本</a></h2>
+              <h2><a style="display: none;">&nbsp;</a></h2>
+          </div>
+          <div class="slide">
+              <div class="slide-con4 div">
+                  <div class="slide-item index_hot1">
+                      {#section name=list loop=$qiantui#}
+
+                      <div class="hot_sale">
+                          <a href="/info_{#$qiantui[list].id#}.html">
+                              <img class="lazy" style="width:89px;height:119px;" data-original="{#$qiantui[list].img#}" src="../images/defaultimg.png" />
+                              <p class="title">{#$qiantui[list].title#}</p>
+                              <p class="author">作者：{#$qiantui[list].author#}</p>
+                              <p class="review">{#$qiantui[list].comment|truncate:70#}.</p>
+                          </a>
+                      </div>
+
+                      {#/section#}
+                                
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="tabArea tabArea4 bannerLink div">
+          <div class="tab-nav tab-nav4 clearfix">
+              <h2><a class="tab-nav-cur">玄幻奇幻</a></h2>
+              <h2><a style="display: none;">&nbsp;</a></h2>
+              <h2><a style="display: none;">&nbsp;</a></h2>
+              <h2><a style="display: none;">&nbsp;</a></h2>
+          </div>
+          <div class="slide">
+              <div class="slide-con4">
+                  <div class="slide-item index_sort1">
+                      <ul>
+                      {#section name=list loop=$xuanhuan#}
+                          <li><a href="/info_{#$xuanhuan[list].id#}.html"><p><span class="sort">[玄幻小说]</span><span class="title">{#$xuanhuan[list].title#}</span></p></a><li>
+                      {#/section#}
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="tabArea tabArea4 bannerLink div">
+          <div class="tab-nav tab-nav4 clearfix">
+              <h2 id="H2_1"><a class="tab-nav-cur">武侠仙侠</a></h2>
+              <h2><a style="display: none;">&nbsp;</a></h2>
+              <h2><a style="display: none;">&nbsp;</a></h2>
+              <h2><a style="display: none;">&nbsp;</a></h2>
+          </div>
+          <div class="slide">
+              <div class="slide-con4">
+                  <div class="slide-item index_sort1">
+                      <ul>
+                      {#section name=list loop=$wuxia#}
+                          <li><a href="/info_{#$wuxia[list].id#}.html"><p><span class="sort">[修真小说]</span><span class="title">{#$wuxia[list].title#}</span></p></a><li>
+                      {#/section#}
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="tabArea tabArea4 bannerLink div">
+          <div class="tab-nav tab-nav4 clearfix">
+              <h2 id="H2_2"><a class="tab-nav-cur">都市言情</a></h2>
+              <h2><a style="display: none;">&nbsp;</a></h2>
+              <h2><a style="display: none;">&nbsp;</a></h2>
+              <h2><a style="display: none;">&nbsp;</a></h2>
+          </div>
+          <div class="slide">
+              <div class="slide-con4">
+                  <div class="slide-item index_sort1">
+                      <ul>
+                          {#section name=list loop=$dushi#}
+                          <li><a href="/info_{#$dushi[list].id#}.html"><p><span class="sort">[都市小说]</span><span class="title">{#$dushi[list].title#}</span></p></a><li>
+                          {#/section#}
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="tabArea tabArea4 bannerLink div">
+          <div class="tab-nav tab-nav4 clearfix">
+              <h2 id="H2_3"><a class="tab-nav-cur">历史军事</a></h2>
+              <h2><a style="display: none;">&nbsp;</a></h2>
+              <h2><a style="display: none;">&nbsp;</a></h2>
+              <h2><a style="display: none;">&nbsp;</a></h2>
+          </div>
+          <div class="slide">
+              <div class="slide-con4">
+                  <div class="slide-item index_sort1">
+                      <ul>
+                          {#section name=list loop=$lishi#}
+                          <li><a href="/info_{#$lishi[list].id#}.html"><p><span class="sort">[历史小说]</span><span class="title">{#$lishi[list].title#}</span></p></a><li>
+                          {#/section#}
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  <script language="javascript" type="text/javascript" src="/js/zepto.min.js"></script>
+  <script language="javascript" type="text/javascript" src="/js/common.js"></script>
+  <script language="javascript" type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript" language="javascript">
+      $(function(){
+          $("img.lazy").lazyload();
+      });
+  </script>
+      <form class="searchForm" method="post">
+          <input type="text" id="bdcsMain" name="q" class="searchForm_input searchForm_input2" value="输入书名•作者" />
+          <input type="button" class="searchForm_btn" value="搜索"  onclick="javascript:doSearch();"/>
+      </form>
+  <footer>
+      <a href="#top"><img src="/images/icon-backtop.gif" title="↑" alt="返回顶部"/></a>
+      <p class="version channel">
+      <a href="/">首页</a>
+      <a rel="nofollow" href="/mybook.php" >我的书架</a>
+      <a rel="nofollow" href="/newcase.html" >阅读记录</a>
+      </p>
+  </footer>
+  </body>
+  </html>
